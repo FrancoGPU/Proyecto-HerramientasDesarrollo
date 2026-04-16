@@ -119,9 +119,9 @@ export const STATS = [
 
 export const NAV_LINKS = [
   { label: 'Inicio', href: '#' },
-  { label: 'Vehículos', href: '#' },
   { label: 'Servicios', href: '#' },
-  { label: 'Contacto', href: '#' }
+  { label: 'Quienes Somos', href: '#' },
+  { label: 'Contactos', href: '#' }
 ];
 
 export const FOOTER_LINKS = [
