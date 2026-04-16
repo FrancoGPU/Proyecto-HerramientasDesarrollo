@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { NAV_LINKS } from '../constants/data';
 import './Navbar.css';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="nav-logo">Álamo<span> Rent</span></div>
+      <Link to="/" className="nav-logo">Álamo<span> Rent</span></Link>
       <ul className="nav-links">
         {NAV_LINKS.map((link) => (
           <li key={link.label}>
-            <a href={link.href} className="nav-link">{link.label}</a>
+            <Link to={link.to} className="nav-link">{link.label}</Link>
           </li>
         ))}
       </ul>
-      <button className="nav-cta">Reservar ahora</button>
+      <Link to="/contacto" className="nav-cta">Reservar ahora</Link>
     </nav>
   );
 };

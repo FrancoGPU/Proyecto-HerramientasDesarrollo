@@ -178,3 +178,117 @@
   height: 1px;
   background: rgba(200, 153, 42, 0.2);
 }
+
+/* STATS BAR */
+.stats-bar {
+  background: var(--alamo-gold);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-item {
+  padding: 1.6rem 2rem;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  display: block;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  display: block;
+}
+
+/* SEARCH SECTION */
+.search-section {
+  background: #fff;
+  padding: 3.5rem 5rem;
+  border-bottom: 1px solid rgba(15, 15, 14, 0.08);
+}
+
+.search-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--alamo-gold);
+  margin-bottom: 1.2rem;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 1px;
+  background: rgba(15, 15, 14, 0.1);
+  border: 1px solid rgba(15, 15, 14, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.search-field {
+  background: #fff;
+  padding: 1.1rem 1.4rem;
+  border: none;
+  outline: none;
+}
+
+.search-field-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--alamo-gray);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.search-field input,
+.search-field select {
+  border: none;
+  outline: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--alamo-black);
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.search-btn {
+  background: var(--alamo-black);
+  color: #fff;
+  border: none;
+  padding: 0 2.5rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.search-btn:hover {
+  background: var(--alamo-gold);
+}

@@ -1,23 +1,29 @@
-import React from 'react';
-import HeroSection from './HeroSection';
-import StatsBar from './StatsBar';
-import SearchBar from './SearchBar';
-import FeaturedCars from './FeaturedCars';
-import WhyChooseUs from './WhyChooseUs';
-import Testimonials from './Testimonials';
-import CallToAction from './CallToAction';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import HomeCoreSection from './HomeCoreSection';
+import HomeShowcaseSection from './HomeShowcaseSection';
 import './Home.css';
 
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.replace('#', '');
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else if (process.env.NODE_ENV !== 'test') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location.hash, location.pathname]);
+
   return (
     <main className="home">
-      <HeroSection />
-      <StatsBar />
-      <SearchBar />
-      <FeaturedCars />
-      <WhyChooseUs />
-      <Testimonials />
-      <CallToAction />
+      <HomeCoreSection />
+      <HomeShowcaseSection />
     </main>
   );
 };

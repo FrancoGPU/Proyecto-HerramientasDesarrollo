@@ -1,6 +1,5 @@
 import React from 'react';
 import { STATS } from '../../constants/data';
-import './StatsBar.css';
 
 const StatsBar = () => {
   return (

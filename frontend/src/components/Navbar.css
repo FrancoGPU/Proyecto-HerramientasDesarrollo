@@ -14,6 +14,9 @@
 }
 
 .nav-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
   font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-size: 22px;
@@ -47,6 +50,10 @@
 }
 
 .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   background: var(--alamo-gold);
   color: #fff;
   border: none;

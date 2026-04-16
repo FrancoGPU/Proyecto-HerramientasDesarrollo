@@ -1,6 +1,5 @@
 import React from 'react';
 import { HERO_IMAGE } from '../../constants/data';
-import './HeroSection.css';
 
 const HeroSection = () => {
   return (

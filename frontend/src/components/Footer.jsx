@@ -9,7 +9,7 @@ const Footer = () => {
       <ul className="footer-links">
         {FOOTER_LINKS.map((link) => (
           <li key={link.label}>
-            <a href={link.href}>{link.label}</a>
+            <a href={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noreferrer' : undefined}>{link.label}</a>
           </li>
         ))}
       </ul>

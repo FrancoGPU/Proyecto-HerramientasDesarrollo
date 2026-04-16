@@ -203,3 +203,171 @@
   background: var(--alamo-black);
   transform: translateY(-2px);
 }
+
+.why-section {
+  background: var(--alamo-black);
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.why-left .section-title {
+  color: #fff;
+}
+
+.why-left .section-title em {
+  color: var(--alamo-gold);
+  font-style: italic;
+}
+
+.why-desc {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 1.2rem;
+  font-weight: 300;
+}
+
+.why-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.why-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(200, 153, 42, 0.15);
+  border-radius: 3px;
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.why-card:hover {
+  border-color: rgba(200, 153, 42, 0.5);
+}
+
+.why-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(200, 153, 42, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.why-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.why-card-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 5rem;
+  background: #fff;
+}
+
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.testi-card {
+  background: var(--alamo-cream);
+  border-radius: 3px;
+  padding: 2rem;
+  border-left: 3px solid var(--alamo-gold);
+  transition: transform 0.2s;
+}
+
+.testi-card:hover {
+  transform: translateY(-4px);
+}
+
+.testi-stars {
+  color: var(--alamo-gold);
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.testi-text {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.8;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+
+.testi-author {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--alamo-black);
+}
+
+.testi-origin {
+  font-size: 11px;
+  color: var(--alamo-gray);
+  margin-top: 2px;
+}
+
+/* CTA FINAL */
+.cta-section {
+  background: var(--alamo-gold);
+  padding: 4rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+}
+
+.cta-sub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 0.6rem;
+  font-weight: 300;
+}
+
+.btn-dark {
+  background: var(--alamo-black);
+  color: #fff;
+  border: none;
+  padding: 16px 36px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.btn-dark:hover {
+  background: #1f1f1d;
+}

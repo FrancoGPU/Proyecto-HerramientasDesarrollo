@@ -118,14 +118,67 @@ export const STATS = [
 ];
 
 export const NAV_LINKS = [
-  { label: 'Inicio', href: '#' },
-  { label: 'Servicios', href: '#' },
-  { label: 'Quienes Somos', href: '#' },
-  { label: 'Contactos', href: '#' }
+  { label: 'Inicio', to: '/' },
+  { label: 'Servicios', to: '/#servicios' },
+  { label: 'Quienes Somos', to: '/#quienes-somos' },
+  { label: 'Contacto', to: '/contacto' }
 ];
 
 export const FOOTER_LINKS = [
-  { label: 'Privacidad', href: '#' },
-  { label: 'Términos', href: '#' },
-  { label: 'Soporte', href: '#' }
+  { label: 'Contacto', href: '/contacto' },
+  { label: 'WhatsApp', href: 'https://wa.me/51987654321', external: true },
+  { label: 'Correo', href: 'mailto:hola@alamorent.pe', external: true }
+];
+
+export const CONTACT_DETAILS = {
+  companyName: 'Álamo Rent',
+  email: 'hola@alamorent.pe',
+  phone: '+51 987 654 321',
+  whatsappNumber: '51987654321',
+  whatsappLabel: '+51 987 654 321',
+  address: 'Av. Javier Prado Este 1234, San Isidro, Lima',
+  schedule: 'Lunes a domingo, 8:00 a 20:00',
+  responseTime: 'Respuesta habitual en menos de 15 minutos'
+};
+
+export const CONTACT_CHANNELS = [
+  {
+    id: 1,
+    label: 'WhatsApp',
+    value: CONTACT_DETAILS.whatsappLabel,
+    href: `https://wa.me/${CONTACT_DETAILS.whatsappNumber}`,
+    description: 'Atención rápida para reservas y consultas.'
+  },
+  {
+    id: 2,
+    label: 'Correo',
+    value: CONTACT_DETAILS.email,
+    href: `mailto:${CONTACT_DETAILS.email}`,
+    description: 'Envíanos los detalles de tu viaje o proyecto.'
+  },
+  {
+    id: 3,
+    label: 'Teléfono',
+    value: CONTACT_DETAILS.phone,
+    href: `tel:${CONTACT_DETAILS.phone.replace(/\s+/g, '')}`,
+    description: 'Comunicación directa con el equipo comercial.'
+  }
+];
+
+export const CONTACT_FAQ = [
+  {
+    id: 1,
+    question: '¿Cuánto tardan en responder?',
+    answer: 'Normalmente respondemos en menos de 15 minutos dentro del horario de atención.'
+  },
+  {
+    id: 2,
+    question: '¿Puedo solicitar una cotización?',
+    answer: 'Sí. Cuéntanos fecha, destino y tipo de vehículo y te devolvemos una propuesta.'
+  },
+  {
+    id: 3,
+    question: '¿Atienden fines de semana?',
+    answer: 'Sí, el equipo de contacto opera todos los días para consultas y reservas.'
+  }
 ];
