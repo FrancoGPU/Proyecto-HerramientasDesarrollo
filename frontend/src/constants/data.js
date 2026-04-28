@@ -119,9 +119,78 @@ export const STATS = [
 
 export const NAV_LINKS = [
   { label: 'Inicio', to: '/' },
-  { label: 'Servicios', to: '/#servicios' },
+  { label: 'Servicios', to: '/servicios' },
   { label: 'Quienes Somos', to: '/#quienes-somos' },
   { label: 'Contacto', to: '/contacto' }
+];
+
+export const SERVICES_MAIN = [
+  {
+    title: 'Alquiler por día / semana / mes',
+    description: 'Planes flexibles para escapadas, trabajo o estadías prolongadas.'
+  },
+  {
+    title: 'Recojo/entrega en aeropuerto',
+    description: 'Coordinamos tu vehículo para que empieces el viaje sin demoras.'
+  },
+  {
+    title: 'Servicio corporativo (empresas)',
+    description: 'Soluciones de movilidad para equipos, visitas y operaciones.'
+  },
+  {
+    title: 'Renta para turismo (paquetes)',
+    description: 'Opciones pensadas para rutas, tours y experiencias a medida.'
+  }
+];
+
+export const SERVICES_COVERAGES = [
+  'Seguro básico incluido',
+  'Cobertura completa (opcional)',
+  'Depósito/garantía y qué cubre/no cubre'
+];
+
+export const SERVICES_EXTRAS = [
+  'GPS / Internet portátil',
+  'Silla para niños',
+  'Conductor adicional',
+  'Entrega a domicilio / hotel'
+];
+
+export const SERVICES_BOOKING_STEPS = [
+  'Elegir vehículo',
+  'Fechas y lugar',
+  'Confirmación',
+  'Retiro/entrega'
+];
+
+export const SERVICES_REQUIREMENTS = [
+  'DNI/Pasaporte',
+  'Licencia vigente',
+  'Edad mínima',
+  'Método de pago aceptado'
+];
+
+export const SERVICES_FAQ = [
+  {
+    id: 1,
+    question: 'Política de combustible',
+    answer: 'Te indicamos la política aplicable al momento de la entrega del vehículo.'
+  },
+  {
+    id: 2,
+    question: 'Cancelaciones y cambios',
+    answer: 'Las condiciones dependen del plan contratado; coordinamos tu solicitud con anticipación.'
+  },
+  {
+    id: 3,
+    question: 'Kilometraje y peajes',
+    answer: 'Definimos el kilometraje incluido y el manejo de peajes antes de confirmar la reserva.'
+  },
+  {
+    id: 4,
+    question: 'Qué hacer en caso de accidente',
+    answer: 'Contáctanos de inmediato para activar el soporte y seguir el protocolo del seguro.'
+  }
 ];
 
 export const FOOTER_LINKS = [
