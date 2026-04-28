@@ -1,3 +1,8 @@
+/* GLOBAL BOX SIZING */
+* {
+  box-sizing: border-box;
+}
+
 /* HERO */
 .hero {
   min-height: 88vh;
@@ -6,6 +11,7 @@
   grid-template-columns: 1fr 1fr;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .hero-texture {
@@ -423,13 +429,15 @@
     grid-template-columns: 1fr;
     min-height: 85vh;
     gap: 0;
+    box-sizing: border-box;
   }
 
   .hero-left {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.2rem;
     justify-content: center;
     min-height: auto;
     order: 2;
+    box-sizing: border-box;
   }
 
   .hero-badge {
@@ -468,6 +476,7 @@
   .hero-right {
     min-height: 320px;
     order: 1;
+    box-sizing: border-box;
   }
 
   .hero-car-glow {
@@ -482,12 +491,14 @@
   /* Stats Bar Mobile */
   .stats-bar {
     grid-template-columns: repeat(2, 1fr);
+    box-sizing: border-box;
   }
 
   .stat-item {
-    padding: 1.1rem 1rem;
+    padding: 1rem 0.8rem;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: none;
+    box-sizing: border-box;
   }
 
   .stat-item:nth-child(even) {
@@ -510,7 +521,8 @@
 
   /* Search Form Mobile */
   .search-section {
-    padding: 1.5rem 1rem;
+    padding: 1.2rem 1rem;
+    box-sizing: border-box;
   }
 
   .search-label {
@@ -523,6 +535,7 @@
     gap: 0;
     border: 1px solid rgba(15, 15, 14, 0.1);
     border-radius: 2px;
+    box-sizing: border-box;
   }
 
   .search-field {
@@ -530,6 +543,7 @@
     background: #fff;
     border-bottom: 1px solid rgba(15, 15, 14, 0.1);
     border-right: none;
+    box-sizing: border-box;
   }
 
   .search-field:last-child {
@@ -543,6 +557,7 @@
   .search-field input,
   .search-field select {
     font-size: 13px;
+    box-sizing: border-box;
   }
 
   .search-btn {
@@ -553,113 +568,370 @@
   }
 }
 
-/* Small Mobile (max-width: 480px) */
-@media (max-width: 480px) {
-  .hero {
-    min-height: 90vh;
-  }
-
+/* Medium Mobile (568px - 660px) - Critical breakpoint */
+@media (max-width: 660px) and (min-width: 600px) {
   .hero-left {
-    padding: 2rem 1.2rem;
-  }
-
-  .hero-badge {
-    font-size: 8px;
-    padding: 3px 6px;
-    margin-bottom: 0.8rem;
+    padding: 1.8rem 1rem;
   }
 
   .hero-title {
-    font-size: 26px;
-    margin-bottom: 0.8rem;
+    font-size: 28px;
   }
 
   .hero-desc {
     font-size: 12px;
-    line-height: 1.5;
-    margin-bottom: 1.2rem;
-  }
-
-  .btn-primary,
-  .btn-ghost {
-    padding: 10px 14px;
-    font-size: 11px;
-  }
-
-  .hero-right {
-    min-height: 280px;
-  }
-
-  .hero-car-glow {
-    width: 220px;
-    height: 140px;
-  }
-
-  .hero-car-image {
-    max-width: 80%;
-  }
-
-  .stats-bar {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .stat-item {
-    padding: 0.9rem 0.8rem;
-    text-align: center;
-  }
-
-  .stat-num {
-    font-size: 22px;
-  }
-
-  .stat-label {
-    font-size: 9px;
   }
 
   .search-section {
-    padding: 1.2rem 0.8rem;
+    padding: 1rem 0.8rem;
   }
 
-  .search-label {
-    font-size: 8px;
+  .stat-item {
+    padding: 0.9rem 0.7rem;
   }
 
-  .search-field-label {
-    font-size: 8px;
+  .search-field {
+    padding: 0.9rem;
+  }
+}
+
+/* Small-Medium Mobile (max-width: 599px) */
+@media (max-width: 599px) and (min-width: 481px) {
+  .hero-left {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-desc {
+    font-size: 11px;
+  }
+
+  .search-section {
+    padding: 0.8rem 0.6rem;
+  }
+
+  .stat-item {
+    padding: 0.8rem 0.6rem;
   }
 
   .search-field {
     padding: 0.8rem;
   }
-
-  .search-field input,
-  .search-field select {
-    font-size: 12px;
-  }
-
-  .search-btn {
-    padding: 0.8rem;
-    font-size: 11px;
-  }
 }
 
-/* Extra Small Mobile (max-width: 360px) */
-@media (max-width: 360px) {
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+  }
+
+  .hero-left {
+    padding: 1.2rem 0.6rem;
+    box-sizing: border-box;
+    order: 2;
+  }
+
+  .hero-badge {
+    font-size: 7px;
+    padding: 2px 4px;
+    margin-bottom: 0.5rem;
+  }
+
   .hero-title {
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
   }
 
   .hero-desc {
-    font-size: 11px;
+    font-size: 10px;
+    line-height: 1.4;
+    margin-bottom: 0.7rem;
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    padding: 6px 10px;
+    font-size: 9px;
+    width: 100%;
+  }
+
+  .hero-right {
+    order: 1;
+    min-height: auto;
+    max-height: 200px;
+    box-sizing: border-box;
+  }
+
+  .hero-car-glow {
+    width: 150px;
+    height: 90px;
+  }
+
+  .hero-car-image {
+    max-width: 75%;
+  }
+
+  .stats-bar {
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+  }
+
+  .stat-item {
+    padding: 0.7rem 0.5rem;
+    text-align: center;
+    box-sizing: border-box;
   }
 
   .stat-num {
     font-size: 20px;
   }
 
+  .stat-label {
+    font-size: 8px;
+  }
+
+  .search-section {
+    padding: 0.5rem 0.3rem;
+    box-sizing: border-box;
+  }
+
+  .search-label {
+    font-size: 6px;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-form {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .search-field-label {
+    font-size: 6px;
+    margin-bottom: 2px;
+  }
+
+  .search-field {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(15, 15, 14, 0.1);
+    box-sizing: border-box;
+  }
+
+  .search-field:last-child {
+    border-bottom: none;
+  }
+
+  .search-field input,
+  .search-field select {
+    font-size: 10px;
+    box-sizing: border-box;
+  }
+
+  .search-btn {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 8px;
+  }
+}
+
+/* Extra Small Mobile (max-width: 360px) */
+@media (max-width: 360px) {
+  .hero-left {
+    padding: 0.8rem 0.4rem;
+  }
+
+  .hero-badge {
+    font-size: 6px;
+    padding: 2px 3px;
+  }
+
+  .hero-title {
+    font-size: 18px;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-desc {
+    font-size: 9px;
+    line-height: 1.3;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   .btn-primary,
   .btn-ghost {
-    padding: 9px 12px;
-    font-size: 10px;
+    padding: 5px 8px;
+    font-size: 8px;
+    width: 100%;
+  }
+
+  .hero-right {
+    min-height: auto;
+    max-height: 160px;
+  }
+
+  .hero-car-glow {
+    width: 120px;
+    height: 70px;
+  }
+
+  .stat-item {
+    padding: 0.6rem 0.3rem;
+  }
+
+  .stat-num {
+    font-size: 16px;
+  }
+
+  .stat-label {
+    font-size: 6px;
+  }
+
+  .search-section {
+    padding: 0.4rem 0.2rem;
+  }
+
+  .search-label {
+    font-size: 5px;
+    margin-bottom: 0.4rem;
+  }
+
+  .search-field-label {
+    font-size: 5px;
+  }
+
+  .search-field {
+    padding: 0.4rem;
+  }
+
+  .search-field input,
+  .search-field select {
+    font-size: 9px;
+  }
+
+  .search-btn {
+    padding: 0.4rem;
+    font-size: 7px;
+  }
+}
+
+/* Ultra Small Mobile (max-width: 320px) */
+@media (max-width: 320px) {
+  .hero-left {
+    padding: 0.7rem 0.3rem;
+  }
+
+  .hero-badge {
+    font-size: 5px;
+    padding: 1px 3px;
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-title {
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-desc {
+    font-size: 8px;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    padding: 4px 6px;
+    font-size: 7px;
+    width: 100%;
+  }
+
+  .hero-right {
+    min-height: auto;
+    max-height: 120px;
+  }
+
+  .hero-car-glow {
+    width: 100px;
+    height: 60px;
+  }
+
+  .hero-car-image {
+    max-width: 70%;
+  }
+
+  .stat-item {
+    padding: 0.5rem 0.2rem;
+  }
+
+  .stat-num {
+    font-size: 14px;
+  }
+
+  .stat-label {
+    font-size: 5px;
+  }
+
+  .search-section {
+    padding: 0.3rem 0.2rem;
+  }
+
+  .search-label {
+    font-size: 5px;
+    margin-bottom: 0.3rem;
+  }
+
+  .search-form {
+    grid-template-columns: 1fr;
+  }
+
+  .search-field-label {
+    font-size: 5px;
+    margin-bottom: 1px;
+  }
+
+  .search-field {
+    padding: 0.3rem;
+    border-bottom: 1px solid rgba(15, 15, 14, 0.1);
+  }
+
+  .search-field:last-child {
+    border-bottom: none;
+  }
+
+  .search-field input,
+  .search-field select {
+    font-size: 8px;
+  }
+
+  .search-btn {
+    width: 100%;
+    padding: 0.3rem;
+    font-size: 6px;
   }
 }

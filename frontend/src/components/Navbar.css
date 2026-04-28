@@ -71,3 +71,185 @@
 .nav-cta:hover {
   background: var(--alamo-gold-light);
 }
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 2rem;
+  }
+
+  .nav-links {
+    gap: 1.8rem;
+  }
+
+  .nav-logo {
+    font-size: 20px;
+  }
+}
+
+/* Tablet Portrait (max-width: 767px) */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0 1.2rem;
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .nav-cta {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+/* Medium Mobile (max-width: 660px) */
+@media (max-width: 660px) and (min-width: 600px) {
+  .navbar {
+    padding: 0 1rem;
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 11px;
+  }
+
+  .nav-cta {
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+}
+
+/* Small-Medium Mobile (max-width: 599px) - Fixed breakpoint */
+@media (max-width: 599px) and (min-width: 481px) {
+  .navbar {
+    padding: 0 0.6rem;
+    height: 52px;
+  }
+
+  .nav-logo {
+    font-size: 15px;
+  }
+
+  .nav-links {
+    gap: 0.6rem;
+  }
+
+  .nav-link {
+    font-size: 10px;
+  }
+
+  .nav-cta {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 0.4rem;
+    height: 48px;
+  }
+
+  .nav-logo {
+    font-size: 11px;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 7px;
+  }
+
+  .nav-link:nth-child(n+3) {
+    display: none;
+  }
+
+  .nav-cta {
+    padding: 4px 8px;
+    font-size: 7px;
+    white-space: nowrap;
+  }
+}
+
+/* Extra Small Mobile (max-width: 400px) */
+@media (max-width: 400px) {
+  .navbar {
+    padding: 0 0.3rem;
+    height: 48px;
+  }
+
+  .nav-logo {
+    font-size: 10px;
+  }
+
+  .nav-links {
+    gap: 0.2rem;
+  }
+
+  .nav-link {
+    font-size: 7px;
+  }
+
+  .nav-link:nth-child(n+3) {
+    display: none;
+  }
+
+  .nav-cta {
+    padding: 4px 6px;
+    font-size: 7px;
+    white-space: nowrap;
+  }
+}
+
+/* Ultra Small Mobile (max-width: 320px) */
+@media (max-width: 320px) {
+  .navbar {
+    padding: 0 0.2rem;
+    height: 44px;
+  }
+
+  .nav-logo {
+    font-size: 9px;
+  }
+
+  .nav-links {
+    gap: 0.1rem;
+  }
+
+  .nav-link {
+    font-size: 6px;
+  }
+
+  .nav-link:nth-child(n+2) {
+    display: none;
+  }
+
+  .nav-cta {
+    padding: 3px 5px;
+    font-size: 6px;
+    white-space: nowrap;
+  }
+}

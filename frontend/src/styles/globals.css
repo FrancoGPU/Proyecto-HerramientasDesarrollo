@@ -14,10 +14,17 @@
   padding: 0;
 }
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--alamo-cream);
   color: var(--alamo-black);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 html, body, #root {
