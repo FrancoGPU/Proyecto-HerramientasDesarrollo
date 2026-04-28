@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --alamo-black: #0f0f0e;
+  --alamo-gold: #c8992a;
+  --alamo-gold-light: #e8c060;
+  --alamo-cream: #f5f0e8;
+  --alamo-gray: #6b6b68;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--alamo-cream);
+  color: var(--alamo-black);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
