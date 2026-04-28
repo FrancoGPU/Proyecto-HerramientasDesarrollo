@@ -1,5 +1,10 @@
 # Proyecto-HerramientasDesarrollo
 
+## Descripción en Feature Branch
+Rama de desarrollo con nuevos cambios responsive.
+Incluye optimizaciones para dispositivos móviles.
+Testing en progreso.
+
 ## 🚗 Frontend - Álamo Rent
 
 Sistema web de renta de vehículos construido con **React 19**.
