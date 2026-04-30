@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -12,7 +11,7 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <HashRouter>
       <ScrollToTop />
       <div className="App">
         <Navbar />
@@ -25,7 +24,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

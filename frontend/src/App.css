@@ -7,5 +7,12 @@
 
 main {
   flex: 1;
-  margin-top: 64px;
+  margin-top: 64px; /* Este se mantiene para pantallas grandes */
+}
+
+/* Para pantallas móviles (menores a 768px de ancho) */
+@media (max-width: 768px) {
+  main {
+    margin-top: 0; /* Quita el margen por completo */
+  }
 }
