@@ -7,7 +7,7 @@ import {
   SERVICES_MAIN,
   SERVICES_REQUIREMENTS
 } from '../../constants/data';
-import './Services.css';
+import './Service.css';
 
 const Services = () => {
   useEffect(() => {
@@ -18,13 +18,15 @@ const Services = () => {
 
   return (
     <main className="services-page">
-      <section className="services-section" aria-label="Servicios">
-        <div className="section-header services-header">
-          <div>
-            <p className="section-eyebrow">Servicios</p>
-            <h1 className="section-title">Nuestros servicios</h1>
-          </div>
+      {/* HERO SECTION */}
+      <section className="services-hero">
+        <div className="services-hero-content">
+          <p className="section-eyebrow">Servicios</p>
+          <h1 className="section-title">Nuestros servicios</h1>
         </div>
+      </section>
+
+      <section className="services-section" aria-label="Servicios">
 
         <div className="services-main-grid" aria-label="Servicios principales">
           {SERVICES_MAIN.map((service) => (

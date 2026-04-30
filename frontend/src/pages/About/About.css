@@ -151,41 +151,52 @@
   line-height: 1.6;
 }
 
-/* MISSION & VISION */
-.about-mision-vision {
-  background: var(--alamo-cream);
-  padding: 5rem;
+/* MISSION & VISION - REDISEÑADA */
+.about-principles {
+  background: linear-gradient(135deg, #f5f0e8 0%, #fff 100%);
+  padding: 4rem 5rem;
+  border-bottom: 1px solid rgba(15, 15, 14, 0.08);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.about-mission-vision-grid {
+.about-principles.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-principles-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.about-mission-card,
-.about-vision-card {
-  padding: 2rem;
+.about-principle-item {
   text-align: center;
 }
 
-.about-card-icon {
-  font-size: 48px;
-  margin-bottom: 1rem;
-}
-
-.about-card-title {
+.about-principle-title {
   font-family: 'Playfair Display', serif;
-  font-size: 24px;
+  font-size: 28px;
   color: var(--alamo-black);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-weight: 700;
 }
 
-.about-card-text {
+.about-principle-text {
   color: var(--alamo-gray);
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.about-principle-divider {
+  width: 2px;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent, var(--alamo-gold), transparent);
 }
 
 /* VALUES GRID */

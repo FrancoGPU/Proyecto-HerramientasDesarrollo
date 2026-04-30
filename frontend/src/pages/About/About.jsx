@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import {
   ABOUT_HERO,
@@ -12,15 +12,10 @@ import './About.css';
 
 const About = () => {
   const [heroRef, heroVisible] = useScrollAnimation();
+  const [principlesRef, principlesVisible] = useScrollAnimation();
   const [storyRef, storyVisible] = useScrollAnimation();
   const [valuesRef, valuesVisible] = useScrollAnimation();
   const [statsRef, statsVisible] = useScrollAnimation();
-
-  useEffect(() => {
-    if (process.env.NODE_ENV !== 'test') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }, []);
 
   return (
     <main className="about-page">
@@ -31,6 +26,22 @@ const About = () => {
           <h1 className="about-hero-title">{ABOUT_HERO.title}</h1>
           <p className="about-hero-subtitle">{ABOUT_HERO.subtitle}</p>
           <p className="about-hero-description">{ABOUT_HERO.description}</p>
+        </div>
+      </section>
+      {/* MISSION & VISION SECTION - REDISEÑADA */}
+      <section ref={principlesRef} className={`about-section about-principles ${principlesVisible ? 'is-visible' : ''}`}>
+        <div className="about-principles-grid">
+          <div className="about-principle-item">
+            <h2 className="about-principle-title">🎯 Misión</h2>
+            <p className="about-principle-text">{ABOUT_MISSION.description}</p>
+          </div>
+
+          <div className="about-principle-divider"></div>
+
+          <div className="about-principle-item">
+            <h2 className="about-principle-title">🔮 Visión</h2>
+            <p className="about-principle-text">{ABOUT_VISION.description}</p>
+          </div>
         </div>
       </section>
 
@@ -55,23 +66,6 @@ const About = () => {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* MISSION & VISION SECTION */}
-      <section className="about-section about-mision-vision">
-        <div className="about-mission-vision-grid">
-          <article className="about-mission-card card-base">
-            <div className="about-card-icon">🎯</div>
-            <h3 className="about-card-title">{ABOUT_MISSION.title}</h3>
-            <p className="about-card-text">{ABOUT_MISSION.description}</p>
-          </article>
-
-          <article className="about-vision-card card-base">
-            <div className="about-card-icon">🔮</div>
-            <h3 className="about-card-title">{ABOUT_VISION.title}</h3>
-            <p className="about-card-text">{ABOUT_VISION.description}</p>
-          </article>
         </div>
       </section>
 

@@ -1,8 +1,10 @@
 /* NAV */
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 99;
+  left: 0;
+  right: 0;
+  z-index: 999;
   background: rgba(15, 15, 14, 0.96);
   backdrop-filter: blur(8px);
   display: flex;
