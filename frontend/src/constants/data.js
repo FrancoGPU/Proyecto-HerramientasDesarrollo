@@ -252,18 +252,36 @@ export const CONTACT_FAQ = [
   }
 ];
 
-// ABOUT PAGE DATA - EN CONSTRUCCIÓN (Rama main)
+// ABOUT PAGE DATA - VERSIÓN MAIN (CAMBIOS ALTERNOS)
 export const ABOUT_HERO = {
-  title: 'Acerca de Álamo Rent',
-  subtitle: 'Tu aliado en movilidad',
-  description: 'PLACEHOLDER - Esta sección será completada en feature/about-services'
+  title: 'Quiénes Somos',
+  subtitle: 'Soluciones de Transporte Confiables',
+  description: 'Somos líderes en la industria de alquiler de vehículos con más de una década sirviendo a clientes en todo el país.'
 };
 
 export const ABOUT_STORY = [
   {
     id: 1,
-    year: '2012',
-    title: 'Fundación',
-    description: 'PLACEHOLDER'
+    year: '2011',
+    title: 'Inicios',
+    description: 'Comenzamos con una pequeña flota en Lima'
+  },
+  {
+    id: 2,
+    year: '2016',
+    title: 'Crecimiento',
+    description: 'Expandimos a otras ciudades del Perú'
   }
+];
+
+export const ABOUT_TEAM = {
+  title: 'Equipo Profesional',
+  members: 'Contamos con más de 50 profesionales dedicados'
+};
+
+export const ABOUT_ACHIEVEMENTS = [
+  'Más de 10 años de experiencia',
+  'Flota de 50+ vehículos',
+  '8000+ clientes satisfechos',
+  'Certificaciones internacionales'
 ];
