@@ -251,3 +251,19 @@ export const CONTACT_FAQ = [
     answer: 'Sí, el equipo de contacto opera todos los días para consultas y reservas.'
   }
 ];
+
+// ABOUT PAGE DATA - EN CONSTRUCCIÓN (Rama main)
+export const ABOUT_HERO = {
+  title: 'Acerca de Álamo Rent',
+  subtitle: 'Tu aliado en movilidad',
+  description: 'PLACEHOLDER - Esta sección será completada en feature/about-services'
+};
+
+export const ABOUT_STORY = [
+  {
+    id: 1,
+    year: '2012',
+    title: 'Fundación',
+    description: 'PLACEHOLDER'
+  }
+];

@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import './About.css';
 
 const About = () => {
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'test') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, []);
+
   return (
-    <div style={{ padding: '5rem', minHeight: '100vh', background: 'var(--alamo-cream)' }}>
-      <h1 style={{ fontFamily: 'Playfair Display', fontSize: '48px', marginBottom: '2rem' }}>
-        Acerca de Álamo Rent
-      </h1>
-      <p>Esta página está en desarrollo...</p>
-    </div>
+    <main className="about-page">
+      <section className="about-hero">
+        <h1>Acerca de Álamo Rent</h1>
+        <p className="about-subtitle">Tu aliado en movilidad desde 2012</p>
+      </section>
+
+      <section className="about-content">
+        <p>Esta página está en desarrollo...</p>
+      </section>
+    </main>
   );
 };
 

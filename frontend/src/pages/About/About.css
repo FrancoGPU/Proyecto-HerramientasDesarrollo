@@ -1,0 +1,28 @@
+/* ABOUT PAGE - EN CONSTRUCCIÓN */
+.about-page {
+  background: var(--alamo-cream);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.about-hero {
+  background: var(--alamo-black);
+  color: #fff;
+  padding: 5rem;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 1rem;
+}
+
+.about-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about-content {
+  padding: 5rem;
+}
