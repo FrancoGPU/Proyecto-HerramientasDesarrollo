@@ -430,6 +430,7 @@
     min-height: 85vh;
     gap: 0;
     box-sizing: border-box;
+    margin-top: 2.5rem;
   }
 
   .hero-left {
