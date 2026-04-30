@@ -120,7 +120,7 @@ export const STATS = [
 export const NAV_LINKS = [
   { label: 'Inicio', to: '/' },
   { label: 'Servicios', to: '/servicios' },
-  { label: 'Quienes Somos', to: '/#quienes-somos' },
+  { label: 'Acerca de', to: '/about' },
   { label: 'Contacto', to: '/contacto' }
 ];
 
