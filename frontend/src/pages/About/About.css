@@ -1,9 +1,13 @@
+@import '../../styles/globals.css';
+
+/* ABOUT PAGE */
 /* ABOUT PAGE - MAIN VERSION */
 .about-page {
   min-height: 100vh;
   background: #fff;
 }
 
+/* HERO SECTION */
 .about-hero {
   background: linear-gradient(135deg, var(--alamo-black) 0%, #1a1a18 100%);
   color: #fff;
@@ -11,7 +15,7 @@
   text-align: center;
 }
 
-.about-hero h1 {
+.about-principle-title {
   font-family: 'Playfair Display', serif;
   font-size: 42px;
   margin-bottom: 0.5rem;
