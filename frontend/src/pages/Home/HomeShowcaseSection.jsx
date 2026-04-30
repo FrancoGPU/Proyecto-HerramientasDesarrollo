@@ -1,14 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CARS, TESTIMONIALS, WHY_CHOOSE_US } from '../../constants/data';
 import './HomeShowcaseSection.css';
 
 const HomeShowcaseSection = () => {
+  const navigate = useNavigate();
+
   const handleViewAll = () => {
     console.log('Ver todos los modelos');
   };
 
   const handleReserve = (carName) => {
-    console.log('Reservar:', carName);
+    navigate('/contacto', { state: { autoSeleccionado: carName } });
   };
 
   const renderStars = (rating) => {
@@ -118,7 +121,12 @@ const HomeShowcaseSection = () => {
           <h2 className="cta-title">¿Listo para tu proximo viaje?</h2>
           <p className="cta-sub">Reserva ahora y obten 10% de descuento en tu primera renta</p>
         </div>
-        <button className="btn-dark">Reservar mi auto →</button>
+        <button 
+          className="btn-dark" 
+          onClick={() => navigate('/contacto')}
+        >
+          Reservar mi auto →
+        </button>
       </div>
     </>
   );
