@@ -252,11 +252,11 @@ export const CONTACT_FAQ = [
   }
 ];
 
-// ABOUT PAGE DATA - EN CONSTRUCCIÓN (Rama main)
+// ABOUT PAGE DATA - COMPLETO EN feature/about-services
 export const ABOUT_HERO = {
   title: 'Acerca de Álamo Rent',
   subtitle: 'Tu aliado en movilidad',
-  description: 'PLACEHOLDER - Esta sección será completada en feature/about-services'
+  description: 'Con más de 12 años de experiencia en la industria de renta de vehículos, Álamo Rent se ha consolidado como la opción preferida para viajeros y empresas en Perú.'
 };
 
 export const ABOUT_STORY = [
@@ -264,6 +264,84 @@ export const ABOUT_STORY = [
     id: 1,
     year: '2012',
     title: 'Fundación',
-    description: 'PLACEHOLDER'
+    description: 'Nace Álamo Rent con una visión clara: proporcionar servicios de renta de vehículos de alta calidad a precios competitivos.'
+  },
+  {
+    id: 2,
+    year: '2015',
+    title: 'Expansión de Flota',
+    description: 'Ampliamos nuestra flota a más de 50 vehículos, incluyendo categorías premium para clientes corporativos.'
+  },
+  {
+    id: 3,
+    year: '2018',
+    title: 'Certificaciones Internacionales',
+    description: 'Obtenemos certificaciones de calidad y seguridad que nos posicionan como líderes en la industria.'
+  },
+  {
+    id: 4,
+    year: '2024',
+    title: 'Presente',
+    description: 'Continuamos innovando con soluciones de movilidad inteligente y sostenible para nuestros clientes.'
+  }
+];
+
+export const ABOUT_MISSION = {
+  title: 'Misión',
+  description: 'Proporcionar soluciones de movilidad confiables, accesibles y de calidad que superen las expectativas de nuestros clientes.'
+};
+
+export const ABOUT_VISION = {
+  title: 'Visión',
+  description: 'Ser la empresa líder en servicios de renta de vehículos en Perú, reconocida por nuestra excelencia operativa y atención al cliente.'
+};
+
+export const ABOUT_VALUES = [
+  {
+    id: 1,
+    icon: '🎯',
+    title: 'Confiabilidad',
+    description: 'Cumplimos nuestros compromisos con puntualidad y transparencia.'
+  },
+  {
+    id: 2,
+    icon: '💡',
+    title: 'Innovación',
+    description: 'Buscamos constantemente mejorar nuestros servicios y procesos.'
+  },
+  {
+    id: 3,
+    icon: '👥',
+    title: 'Servicio al Cliente',
+    description: 'Tu satisfacción es nuestro principal objetivo.'
+  },
+  {
+    id: 4,
+    icon: '🌱',
+    title: 'Sostenibilidad',
+    description: 'Comprometidos con el cuidado del ambiente y prácticas responsables.'
+  }
+];
+
+export const ABOUT_TEAM_STATS = [
+  {
+    id: 1,
+    number: '+12',
+    label: 'Años de experiencia'
+  },
+  {
+    id: 2,
+    number: '50+',
+    label: 'Vehículos en flota'
+  },
+  {
+    id: 3,
+    number: '8k+',
+    label: 'Clientes satisfechos'
+  },
+  {
+    id: 4,
+    number: '24/7',
+    label: 'Disponibilidad'
   }
 ];
