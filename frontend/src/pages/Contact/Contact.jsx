@@ -31,7 +31,9 @@ const Contact = () => {
     }
     if (!formData.phone.trim()) nextErrors.phone = 'Ingresa un teléfono de contacto.';
     if (!formData.subject.trim()) nextErrors.subject = 'Indica el motivo de tu mensaje.';
-    if (!formData.message.trim() || formData.message.trim().length < 20) {
+
+    const trimmedMessage = formData.message.trim();
+    if (!trimmedMessage || trimmedMessage.length < 20) {
       nextErrors.message = 'Escribe un mensaje con más detalle.';
     }
 
