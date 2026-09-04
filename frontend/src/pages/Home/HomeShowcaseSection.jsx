@@ -3,6 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import { CARS, TESTIMONIALS, WHY_CHOOSE_US } from '../../constants/data';
 import './HomeShowcaseSection.css';
 
+const STAR_STRINGS = [
+  '☆☆☆☆☆',
+  '★☆☆☆☆',
+  '★★☆☆☆',
+  '★★★☆☆',
+  '★★★★☆',
+  '★★★★★'
+];
+
 const HomeShowcaseSection = () => {
   const navigate = useNavigate();
 
@@ -15,7 +24,7 @@ const HomeShowcaseSection = () => {
   };
 
   const renderStars = (rating) => {
-    return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+    return STAR_STRINGS[rating] || '☆☆☆☆☆';
   };
 
   return (
