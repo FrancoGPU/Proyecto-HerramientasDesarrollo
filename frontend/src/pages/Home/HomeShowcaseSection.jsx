@@ -7,7 +7,6 @@ const HomeShowcaseSection = () => {
   const navigate = useNavigate();
 
   const handleViewAll = () => {
-    console.log('Ver todos los modelos');
   };
 
   const handleReserve = (carName) => {
