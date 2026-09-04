@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import HomeCoreSection from './HomeCoreSection';
 import HomeShowcaseSection from './HomeShowcaseSection';
+import { scrollToTop } from '../../utils/scroll';
 import './Home.css';
 
 const Home = () => {
@@ -15,8 +16,8 @@ const Home = () => {
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    } else if (process.env.NODE_ENV !== 'test') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      scrollToTop(true);
     }
   }, [location.hash, location.pathname]);
 

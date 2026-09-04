@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { NAV_LINKS } from '../constants/data';
+import { scrollToTop } from '../utils/scroll';
 import './Navbar.css';
 
 const Navbar = () => {
   const handleNavClick = () => {
     // Scroll al top inmediatamente cuando se hace click
-    if (process.env.NODE_ENV !== 'test') {
-      window.scrollTo(0, 0);
-    }
+    scrollToTop();
   };
 
   return (
