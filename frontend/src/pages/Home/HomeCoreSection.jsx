@@ -31,7 +31,7 @@ const HeroSection = () => {
           <img 
             src={HERO_IMAGE} 
             alt="Auto de lujo Álamo Rent"
-            className="hero-car-image"
+            className="hero-car-image" /* BOLT OPTIMIZATION: Prioritize LCP image loading */ fetchPriority="high" decoding="async"
           />
         </div>
         <div className="hero-line"></div>
