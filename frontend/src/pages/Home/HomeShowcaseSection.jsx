@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CARS, TESTIMONIALS, WHY_CHOOSE_US } from '../../constants/data';
 import './HomeShowcaseSection.css';
@@ -6,13 +6,14 @@ import './HomeShowcaseSection.css';
 const HomeShowcaseSection = () => {
   const navigate = useNavigate();
 
-  const handleViewAll = () => {
+  const handleViewAll = useCallback(() => {
     console.log('Ver todos los modelos');
-  };
+  }, []);
 
-  const handleReserve = (carName) => {
+  const handleReserve = useCallback((e) => {
+    const carName = e.currentTarget.dataset.model;
     navigate('/contacto', { state: { autoSeleccionado: carName } });
-  };
+  }, [navigate]);
 
   const renderStars = (rating) => {
     return '★'.repeat(rating) + '☆'.repeat(5 - rating);
@@ -64,7 +65,8 @@ const HomeShowcaseSection = () => {
                   </div>
                   <button
                     className="btn-reserve"
-                    onClick={() => handleReserve(car.model)}
+                    data-model={car.model}
+                    onClick={handleReserve}
                   >
                     RESERVAR
                   </button>
