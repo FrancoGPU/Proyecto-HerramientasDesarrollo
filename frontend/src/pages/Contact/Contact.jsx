@@ -5,6 +5,8 @@ import ContactFormCard from './ContactFormCard';
 import ContactInfoCard from './ContactInfoCard';
 import './Contact.css';
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const Contact = () => {
   const [heroRef, heroVisible] = useScrollAnimation();
   const [formRef, formVisible] = useScrollAnimation();
@@ -26,7 +28,7 @@ const Contact = () => {
     if (!formData.name.trim()) nextErrors.name = 'Ingresa tu nombre completo.';
     if (!formData.email.trim()) {
       nextErrors.email = 'Ingresa un correo válido.';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+    } else if (!EMAIL_REGEX.test(formData.email)) {
       nextErrors.email = 'El correo no tiene un formato válido.';
     }
     if (!formData.phone.trim()) nextErrors.phone = 'Ingresa un teléfono de contacto.';
