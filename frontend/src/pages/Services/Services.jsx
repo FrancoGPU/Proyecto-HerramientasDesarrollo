@@ -7,13 +7,12 @@ import {
   SERVICES_MAIN,
   SERVICES_REQUIREMENTS
 } from '../../constants/data';
+import { scrollToTop } from '../../utils/scroll';
 import './Service.css';
 
 const Services = () => {
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'test') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    scrollToTop(true);
   }, []);
 
   return (
