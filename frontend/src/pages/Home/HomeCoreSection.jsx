@@ -72,7 +72,6 @@ const SearchBar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log('Búsqueda:', formData);
   };
 
   return (
