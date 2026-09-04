@@ -35,7 +35,7 @@ const ContactHero = ({ heroRef, heroVisible }) => {
             className="contact-channel"
             href={channel.href}
             target={channel.label === 'WhatsApp' ? '_blank' : undefined}
-            rel={channel.label === 'WhatsApp' ? 'noreferrer' : undefined}
+            rel={channel.label === 'WhatsApp' ? 'noopener noreferrer' : undefined}
           >
             <div>
               <span className="contact-channel-label">{channel.label}</span>
