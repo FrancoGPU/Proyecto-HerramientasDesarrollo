@@ -16,3 +16,13 @@ main {
     margin-top: 0; /* Quita el margen por completo */
   }
 }
+
+.loading-fallback {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
