@@ -1,13 +1,17 @@
-import React from 'react';
-import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';import Navbar from './components/Navbar';
+import React, { Suspense } from 'react';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Services from './pages/Services/Services';
 import ScrollToTop from './components/ScrollToTop';
-import Contact from './pages/Contact/Contact';
 import './styles/globals.css';
 import './App.css';
+
+// Dynamically import non-critical route components to reduce initial bundle size.
+// The Home component remains synchronously imported as it's the critical first view.
+const About = React.lazy(() => import('./pages/About/About'));
+const Services = React.lazy(() => import('./pages/Services/Services'));
+const Contact = React.lazy(() => import('./pages/Contact/Contact'));
 
 function App() {
   return (
@@ -15,13 +19,15 @@ function App() {
       <ScrollToTop />
       <div className="App">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/servicios" element={<Services />} />
-          <Route path="/contacto" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <Suspense fallback={<div className="loading">Cargando...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/servicios" element={<Services />} />
+            <Route path="/contacto" element={<Contact />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Suspense>
         <Footer />
       </div>
     </HashRouter>
