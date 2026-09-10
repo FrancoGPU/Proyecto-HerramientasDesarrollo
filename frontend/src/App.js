@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Services from './pages/Services/Services';
 import ScrollToTop from './components/ScrollToTop';
-import Contact from './pages/Contact/Contact';
 import './styles/globals.css';
 import './App.css';
+
+// Lazy loading non-critical routes for better performance
+const About = lazy(() => import('./pages/About/About'));
+const Services = lazy(() => import('./pages/Services/Services'));
+const Contact = lazy(() => import('./pages/Contact/Contact'));
 
 function App() {
   return (
@@ -15,13 +17,15 @@ function App() {
       <ScrollToTop />
       <div className="App">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/servicios" element={<Services />} />
-          <Route path="/contacto" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <Suspense fallback={<div className="loading-fallback">Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/servicios" element={<Services />} />
+            <Route path="/contacto" element={<Contact />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Suspense>
         <Footer />
       </div>
     </HashRouter>
